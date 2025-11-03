@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+streamlit = ">=1.39.0,<2.0"
+faiss-cpu = ">=1.8.0"
+langchain = ">=0.3.8"
+langchain-core = ">=0.3.15"
+langchain-community = ">=0.3.8"
+langchain-openai = ">=0.2.2"
+sentence-transformers = ">=3.1.1"
+python-dotenv = ">=1.0.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
