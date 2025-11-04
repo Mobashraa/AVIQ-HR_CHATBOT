@@ -2,14 +2,15 @@ from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 from langchain_utilss import qa_chain
 import os
+from flask_cors import CORS
 
 # Load environment variables
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 
 # Initialize Flask app
-app = Flask(__name__)
-
+app = Flask("HR_POLICY chatbot")
+CORS(app)
 @app.route("/", methods=["GET"])
 def home():
     return jsonify({"message": "🤖 HR Policy Chatbot API is running successfully!"})
@@ -38,3 +39,4 @@ def ask_question():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
+
