@@ -13,9 +13,9 @@ uploaded_chain = None
 uploaded_index_path = None
 
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def home():
-    return render_template("index.html", mode=current_mode)
+    return jsonify({"message": "🤖 HR Policy Chatbot API is running successfully!"})
 
 
 # Upload Document
@@ -87,4 +87,5 @@ if __name__ == "__main__":
     os.makedirs("uploaded_docs", exist_ok=True)
     os.makedirs("vectorstore", exist_ok=True)
     app.run(debug=True, port=5000)
+
 
