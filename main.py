@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Track current mode and chain
-current_mode = "default"  # 'default' = use base docs, 'upload' = use uploaded docs
+current_mode = "default"  
 uploaded_chain = None
 uploaded_index_path = None
 
@@ -18,9 +18,8 @@ def home():
     return render_template("index.html", mode=current_mode)
 
 
-# -------------------------
-# 📤 Upload Document
-# -------------------------
+# Upload Document
+
 @app.route("/upload", methods=["POST"])
 def upload_file():
     global uploaded_index_path, uploaded_chain, current_mode
@@ -51,9 +50,9 @@ def chat():
     result = base_chain.invoke({"query": query})
     return jsonify({"answer": result["result"]})
 
-# -------------------------
-# 🔁 Switch Back to Default Mode
-# -------------------------
+
+#Switch Back to Default Mode
+
 @app.route("/reset", methods=["POST"])
 def reset_to_default():
     global uploaded_chain, current_mode
@@ -62,9 +61,8 @@ def reset_to_default():
     return jsonify({"message": " Switched back to Default Mode (HR Policy Data)."})
 
 
-# -------------------------
-# 💬 Ask Questions
-# -------------------------
+#  Ask Questions
+
 @app.route("/ask", methods=["POST"])
 def ask():
     global uploaded_chain, current_mode
@@ -89,3 +87,4 @@ if __name__ == "__main__":
     os.makedirs("uploaded_docs", exist_ok=True)
     os.makedirs("vectorstore", exist_ok=True)
     app.run(debug=True, port=5000)
+
