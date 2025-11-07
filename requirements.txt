@@ -37,7 +37,7 @@ joblib==1.5.2
 jsonpatch==1.33
 jsonpointer==3.0.0
 langchain==0.3.7
-langchain-classic==1.0.0
+
 langchain-community==0.3.3
 langchain-core==0.3.63
 langchain-openai==0.2.2
@@ -92,3 +92,4 @@ xlsxwriter==3.2.9
 yarl==1.22.0
 zstandard==0.25.0
  
+
