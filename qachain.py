@@ -1,6 +1,4 @@
-AZURE_OPENAI_API_KEY = "ELS7NnWuZ0AARkr0VgHwEVp1pS2qQpVt0QFrCVrjJ2tXpIhkwUicJQQJ99BHAC77bzfXJ3w3AAABACOGZotR"
-AZURE_OPENAI_ENDPOINT = "https://msl-ai.openai.azure.com/"
-AZURE_OPENAI_API_VERSION = "2024-12-01-preview"
+
 
 import os
 # Allowed file extensions for upload
