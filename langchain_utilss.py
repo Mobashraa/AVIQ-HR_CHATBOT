@@ -1,9 +1,4 @@
 
-AZURE_OPENAI_API_KEY="ELS7NnWuZ0AARkr0VgHwEVp1pS2qQpVt0QFrCVrjJ2tXpIhkwUicJQQJ99BHAC77bzfXJ3w3AAABACOGZotR"
-AZURE_OPENAI_ENDPOINT="https://msl-ai.openai.azure.com/"
-AZURE_OPENAI_API_VERSION="2024-12-01-preview"
-model_name = "gpt-4o-mini"
-deployment_name = "gpt-4o-mini"
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -126,5 +121,6 @@ if __name__ == "__main__":
 
     result = qa_chain.invoke ({"query": query}) 
     print("🤖 Chatbot:", result["result"])
+
 
 
